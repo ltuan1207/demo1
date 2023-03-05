@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Class dùng chung */
+.clear{
+    clear: both;/*cach 2 sua loi hien thi float*/
+}
+
+.img_banner img{
+    margin-top: 162px;
+    width: 71%;
+    float: right;
+}

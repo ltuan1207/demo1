@@ -1,0 +1,380 @@
+/* RESET CSS*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Class dùng chung */
+.clear{
+    clear: both;/*cach 2 sua loi hien thi float*/
+}
+
+.text-white{
+    color: #fff !important;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-third {
+    width: calc(100% /3);
+    margin-top: 16px;
+}
+.col-five{
+    width: calc(100% /5);
+    margin-top: 16px;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-16{
+    margin-top: 16px !important;
+}
+
+.col-half{
+    width: 50%;
+}
+
+.col-full{
+    width: 100%;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+/* Class css đặc trưng */
+
+#header{
+    height: 106px;
+    background-color:#19212b;
+    position: fixed; /* phu thuoc vao khung trình duyêt khi kéo*/
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#nav{
+    display: flex;
+    justify-content: right;
+}
+#nav, .subnav{
+    list-style-type: none;
+}
+#nav > li{
+    display: inline-block;
+    
+}
+#nav li{
+    position: relative;
+}
+#nav > li > a{
+    color: #fff ;
+    text-transform: uppercase;
+}
+#nav li a{
+    text-decoration: none;
+    line-height: 106px;
+    padding: 0 24px;
+    display: block;
+}
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+    font-weight: 700;
+    color: #000;
+    background-color: #ccc;
+}
+#nav .subnav{
+    display:none;
+    min-width: 250px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .subnav a{
+    color: #19212b;
+    padding: 0 16px;
+    line-height: 38px;
+}
+#nav .nav-arrow-down{
+    font-size: 14px;
+}
+#nav .ti-search:before {
+    content: "\e610";
+    font-size: 14px;
+    padding-left: 6px;
+}
+
+#header img{
+    padding: 29px 21px;
+    margin-left: 250px;
+}
+
+#header img:hover{
+    cursor: pointer; /*hinh con tro chuot khi tro vao*/
+}
+
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn{
+    float: right;
+    padding: 30px 32px;
+}
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+}
+#header .menu-icon{
+    color: #fff;
+    font-size: 28px;
+    line-height: 46px;
+}
+#slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    /* background: url('/assets/img/slider1.png') top center / cover no-repeat; */
+}
+
+.img-sld img{
+    width: 100%;
+}
+
+#slider .text-content{
+    position: absolute;
+    bottom: 47px;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    /*
+    right: 0;
+    left: 0;
+    */
+    width: 100%;
+    text-align: center;
+}
+
+#content .content-section {
+    width: 800px;
+    padding: 64px 0 112px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .content-section-item{
+    width: 100%;
+    padding: 64px 0 112px;
+    padding: 0 32px 32px ;
+}
+
+
+#content .content-introduce {
+    width: 100%;
+    padding: 64px 0 112px;
+}
+
+
+#content .introduce-list{
+    /* margin-top: 47px; */
+    /* overflow: hidden; *//*cach 1 sua loi hien thi float*/
+}
+
+#content .section-heading{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px ;
+    padding: 56px 0 0;
+}
+#content .section-sub-heading{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic; /*chu nghieng*/
+    opacity: 0.6;
+    
+}
+#content .about-text{
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify; /*can giua deu 2 ben*/
+    line-height: 1.4;
+}
+
+#content .member-img{
+    width: 100%;
+    /* margin-top: 15px;
+    border-radius: 5px; */
+}
+/* tour-section */
+.tour-section{
+    background-color: #19212b;
+}
+
+
+/* places */
+.item-list{
+    margin: 32px -8px 48px ;
+    /* padding-bottom: 48px; */
+    /*cach 2 */
+}
+
+.item-img:hover{
+    opacity: 0.6;
+}
+.item-img{
+    width: 100%;
+    display: block;
+    border-bottom: 2px solid #19212b ;
+    border-radius: 5px;
+}
+.item-body{
+    padding: 16px;
+    font-size: 15px;
+    background-color: #fff;
+    
+}
+.item-heading{
+    font-size: 15px;
+    font-weight: 600;/*lam mong chu*/
+}
+
+.item-desc{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+.item-buy-btn{
+    color: #fff;
+    background-color: #039;
+    text-decoration: none;/*bo gach chan*/
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    width: 100%;
+}
+.item-buy-btn:hover{
+    background-color: #ccc;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #000;
+}
+
+
+.contact-infor a{
+    text-decoration: none;
+    color: #000;
+    opacity: 0.8;
+}
+
+.contact-infor a:hover{
+    opacity: 1;
+    color: #101aef;
+}
+.contact-content{
+    margin-top: 48px;
+}
+.contact-infor{
+    font-size:  17px;
+    line-height: 1.6;
+}
+.contact-infor i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form{
+    font-size: 15px; 
+}
+
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form .form-submit-btn{
+   background-color: #000;
+   color: #fff;
+   border: #000;
+   padding: 12px 32px;
+   float: right; 
+}
+
+.contact-form .form-submit-btn:hover{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 560px;
+}
+
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+    bottom: 0;
+}
+
+#footer .social-list{
+    font-size: 20px;
+
+}
+
+#footer .social-list a{
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .social-list a:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copyright{
+     margin-top: 15px;
+     color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright:hover{
+    color: rgba(0, 0, 0, 0.3);
+}
